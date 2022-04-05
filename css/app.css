@@ -1,12 +1,17 @@
+@font-face {
+    font-family: 'Cako';
+    src: url('/Users/ellieforeman/Library/Fonts/Cako-Regular.ttf');
+}
+
 :root {
-    --text-color: white;
-    --text-dark-color: #414143;
+    --text-color: #F3D4C9;
+    --text-dark-color: #343434;
     --header-height: 100px;
     --burger-width: 40px;
-    --font-wide-headings: 'Rubik Mono One', sans-serif;
+    --font-wide-headings: 'Cako', sans-serif;
     --font-narrow-headings: 'Darker Grotesque', sans-serif;
     --bcg-green: #ACB7AE;
-    --bcg-lightcream: #FEFCF0;;
+    --bcg-lightcream: #F76354;;
     --bcg-lightbrown: #b0a7a4;
     --bcg-lightblue: #a3abb1;
     --bcg-loaderblue: #758A94;
@@ -16,11 +21,14 @@
     --v-spacing: 10vh;
     --h-gutter: 3.6vw;  
     --easing: cubic-bezier(0.5, 0.7, 0.4, 1);
+    --logo-grad-1: rgba(243,212,201,0.25);
+    --logo-grad-2: #F3D4C9
 }
 
 body {
     font: 16px/1.7 'Source Sans Pro', Helvetica, Helvetica Neue, Arial, sans-serif;
     color: var(--text-dark-color);
+    margin: 0;
 }
 
 /* Fonts */
@@ -28,8 +36,8 @@ h1 {
     font-family: var(--font-wide-headings);
     font-weight: normal;
     text-align: center;
-    color: var(--text-dark-color);
-    font-size: 9vw;
+    color: var(--text-color);
+    font-size: 8vw;
 }
 
 h2 {
@@ -40,6 +48,10 @@ h2 {
     margin: 0;
     display: block;
     letter-spacing: 0.03em;
+}
+
+.light-text {
+    color: var(--text-color);
 }
 
 .section-headers {
@@ -89,25 +101,69 @@ section {
     flex-direction: column;
 }
 
+/* Blobs */
+.rds-grad-cls-1 {
+    fill: url(#linearGradient-7uou0zttsg-1);
+}
+
+.logo-blob {
+    width: 25%;
+    position: absolute;
+    margin-top: -12%; /* Half the height */
+    margin-left: -12%; 
+}
+
+.logo-blob.a {
+    top: 40%;
+    left: 50%;
+}
+
+.logo-blob.b {
+    top: 50%;
+    left: 35%;
+}
+
+.logo-blob.c {
+    top: 55%;
+    left: 50%;
+}
+
+.logo-blob.d {
+    top: 45%;
+    left: 65%;
+}
+
+.svg-master-wrap {
+    display: none;
+}
+
 /* Top Nav */
+.header-line {
+    width: 82%;
+    border-bottom: #F3D4C9 1px solid;
+    position: absolute;
+    top: 8vh;
+    right: 12vw;
+}
+
 .burger {
-    width: 7.7vw;
-    height: 7.7vw;
+    width: 6vw;
+    height: 6vw;
     position: fixed;
     top: 5vh;
     left: auto;
     right: var(--h-gutter);
     z-index: 2;
     font-family: var(--font-narrow-headings);
-    font-size: 2vw;
+    font-size: 1.5vw;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     text-align: center;
 }
 
 .burger .menu-circle {
-    min-width: 8vw;
-    min-height: 8vw;
+    min-width: 6vw;
+    min-height: 6vw;
     background: url(../img/EllipseMenu.svg) no-repeat center;
     background-size: 100% 100%;
     animation: rotation 15s linear infinite;
@@ -145,7 +201,21 @@ header h1 {
     z-index: 1;
     margin-bottom: 0;
     pointer-events: none;
+    position: absolute;
+    bottom: 6vh;
+    left: 5vw;
 }
+
+header p {
+    position: absolute;
+    bottom: 1.5vh;
+    left: 31vw;
+    font-size: 1.5vw;
+    font-family: 'Karla', sans-serif;
+    color: var(--text-color);
+    letter-spacing: 1.2px;
+}
+
 .arrow {
     min-width: 85vw;
     height: 20vw;
@@ -198,6 +268,35 @@ header h1 {
 }
 .panel.two {
     background-color: #F6BB30;
+}
+.box {
+    width: 100px;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    background-color: white;
+    border-radius: 8px;
+    color: #222;
+    font-weight: 700;
+    margin-left: 20px;
+    will-change: transform;
+}
+.box.active {
+    background-color: orange;
+    border: 2px solid white;
+}
+
+svg {
+    /* display: block;
+    position: absolute;
+    left: 0;
+    right: 0; */
+    width: 300px;
+  
+}
+
+#wave2 {
+    visibility:hidden;
 }
 
 /* ==========================================================================

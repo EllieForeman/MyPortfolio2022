@@ -1,0 +1,22 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Ellie's portfolio site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EllieForeman/portfolio-2022.git"
+  },
+  "author": "Ellie Foreman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EllieForeman/portfolio-2022/issues"
+  },
+  "homepage": "https://github.com/EllieForeman/portfolio-2022#readme",
+  "dependencies": {
+    "gsap": "npm:@gsap/simply@^3.9.1"
+  }
+}
