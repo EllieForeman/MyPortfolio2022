@@ -85,10 +85,7 @@ section {
 }
 
 .container {
-    width: 300%;
     height: 100%;
-    display: flex;
-    flex-wrap: nowrap;
 }
 
 .full-height {
@@ -101,26 +98,27 @@ section {
     flex-direction: column;
 }
 
-/* Blobs */
-.rds-grad-cls-1 {
+/* HEADER PAGE - 
+Blobs */
+.gradient {
     fill: url(#linearGradient-7uou0zttsg-1);
 }
 
-.logo-blob {
-    width: 25%;
+.blobz {
+    width: 40%;
     position: absolute;
-    margin-top: -12%; /* Half the height */
-    margin-left: -12%; 
+    margin-top: -20%; /* Half the height */
+    margin-left: -20%; 
 }
 
 .logo-blob.a {
     top: 40%;
     left: 50%;
-}
+} 
 
 .logo-blob.b {
-    top: 50%;
-    left: 35%;
+    top: 49%;
+    left: 28%;
 }
 
 .logo-blob.c {
@@ -130,7 +128,17 @@ section {
 
 .logo-blob.d {
     top: 45%;
-    left: 65%;
+    left: 75%;
+}
+
+.logo-blob.e {
+    top: 54%;
+    left: 67%;
+}
+
+.logo-blob.f {
+    top: 43%;
+    left: 34%;
 }
 
 .svg-master-wrap {
@@ -216,12 +224,6 @@ header p {
     letter-spacing: 1.2px;
 }
 
-.arrow {
-    min-width: 85vw;
-    height: 20vw;
-    background: url(../img/scroll-to-work.svg) no-repeat right;
-    background-size: 30%;
-}
 
 /* I like section */
 .i-like-outer-container {
@@ -286,15 +288,6 @@ header p {
     border: 2px solid white;
 }
 
-svg {
-    /* display: block;
-    position: absolute;
-    left: 0;
-    right: 0; */
-    width: 300px;
-  
-}
-
 #wave2 {
     visibility:hidden;
 }
@@ -308,8 +301,15 @@ svg {
 }
 
 @media only screen and (min-width: 768px) {
-
-
+    body {
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+    .container {
+        width: 300%;
+        display: flex;
+        flex-wrap: nowrap;
+    }
 }
 
 @media only screen and (min-width: 1140px) {
