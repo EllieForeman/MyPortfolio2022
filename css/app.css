@@ -11,7 +11,8 @@
     --font-wide-headings: 'Cako', sans-serif;
     --font-narrow-headings: 'Darker Grotesque', sans-serif;
     --bcg-green: #ACB7AE;
-    --bcg-lightcream: #F76354;;
+    --bcg-red: #F76354;
+    --bcg-lightcream:#FEFCF0;
     --bcg-lightbrown: #b0a7a4;
     --bcg-lightblue: #a3abb1;
     --bcg-loaderblue: #758A94;
@@ -31,6 +32,7 @@ body {
     margin: 0;
 }
 
+/* ------- GLOBAL STYLES -------- */
 /* Fonts */
 h1 {
     font-family: var(--font-wide-headings);
@@ -91,12 +93,23 @@ section {
 .full-height {
     min-height: 100vh;
     min-width: 100vw;
+}
+
+.flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     flex-direction: column;
 }
+
+.flex-end-to-center {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 /* HEADER PAGE - 
 Blobs */
@@ -146,14 +159,6 @@ Blobs */
 }
 
 /* Top Nav */
-.header-line {
-    width: 82%;
-    border-bottom: #F3D4C9 1px solid;
-    position: absolute;
-    top: 8vh;
-    right: 12vw;
-}
-
 .burger {
     width: 6vw;
     height: 6vw;
@@ -202,7 +207,7 @@ header {
     flex-direction: column;
     perspective: 1000px;
     z-index: 2;
-    background-color: var(--bcg-lightcream);
+    background-color: var(--bcg-red);
 }
 header h1 {
     line-height: 10.4vw;
@@ -225,41 +230,37 @@ header p {
 }
 
 
-/* I like section */
+/* I LIKE SECTION */
 .i-like-outer-container {
-    background-color: #C6CEB9;
+    background-color: var(--bcg-lightcream);
 }
-.i-like-inner-container {
-    width: 70vw;
-    margin-right: 12vw;
+
+.curvy-line-seperator {
+    background: url(../img/Ellipse34.svg) no-repeat center;
+    width: 100vw;
+    height: 100px;
+    background-size: cover;
 }
-.i-like-outer-container h2 .description {
+
+.i-like-outer-container p {
+    font-family: 'Karla', serif; 
+    font-size: 8.5vw;
+    font-weight: 300;
+    text-align: center;
+    margin: 10%;
+}
+
+.i-like-outer-container p .description {
     font-family: 'Bodoni Moda', serif;
-    font-size: 5.5vw;
+    font-size: 11.5vw;
     font-weight: 600;
     margin: 0 4px 0 4px;
 }
-.i-like-inner-container h2:nth-child(2) {
-    padding-left: 2vw;
+
+.i-like-height {
+    height: calc(100vh - 100px);
 }
-.i-like-inner-container h2:nth-child(3) {
-    padding-left: 5vw;
-}
-.i-like-inner-container h2:nth-child(4) {
-    padding-left: 42vw;
-    text-align: right;
-    margin-top: -70px
-}
-.i-like-inner-container h2:nth-child(5) {
-    width: 70%;
-    text-align: right;
-    margin-top: -20px
-}
-.i-like-inner-container h2:nth-child(7) {
-    width: 80%;
-    text-align: right;
-    margin-top: -10px
-}
+
 
 /* My work section */
 .final {
@@ -288,9 +289,6 @@ header p {
     border: 2px solid white;
 }
 
-#wave2 {
-    visibility:hidden;
-}
 
 /* ==========================================================================
     Media Queries
@@ -309,6 +307,25 @@ header p {
         width: 300%;
         display: flex;
         flex-wrap: nowrap;
+    }
+    /* Top Nav */
+    .header-line {
+        width: 82%;
+        border-bottom: #F3D4C9 1px solid;
+        position: absolute;
+        top: 8vh;
+        right: 12vw;
+    }
+    /* I LIKE SECTION */
+    .flex-end-to-center {
+        align-items: end;
+    }
+    .i-like-outer-container p {
+        text-align: end;
+        font-size: 4.5vw;
+    } 
+    .i-like-outer-container p .description {
+        font-size: 6.5vw;
     }
 }
 

@@ -19,6 +19,7 @@ ScrollTrigger.matchMedia({
             end: "+=3000" // end is after scrolling 3000px from start - speed of animation
             }
         });
+
         // ------- Box Movement -------
         gsap.set(".box-1", {y: 100});
         // ScrollTrigger.defaults({markers: {startColor: "white", endColor: "white"}});
@@ -39,26 +40,6 @@ ScrollTrigger.matchMedia({
 
     }
 });
-
-
-
-// ------- Morph Blob on scroll -------
-// const wave = document.getElementById("wave1");
-// const header = document.getElementById("svg-blob");
-
-// const tl = gsap.timeline({
-//     scrollTrigger: {
-//         trigger: header,
-//         start: 'top bottom',
-//         end: "+=1000", // end is after scrolling 3000px from start - speed of animation
-//         scrub: 1,
-//         // invalidateOnRefresh: true,
-//         markers: true
-//     },
-// });
-
-
-// tl.to(wave, {morphSVG:"#wave2"});
 
 //Get all logo blobs
 const logoBlobs = gsap.utils.toArray(".logo-blob");
