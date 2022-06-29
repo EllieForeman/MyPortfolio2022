@@ -120,8 +120,8 @@
         </header>
         <body>
             <div class="container">
-                <div class="panel i-like-outer-container full-height">
-                    <div class="curvy-line-seperator"></div>
+                <section class="panel i-like-outer-container full-height">
+                    <div class="curvy-line-top"></div>
                     <div class="i-like-height flex-end-to-center">
                         <p>
                             I love working on websites <br> that are <span class="description">playful</span>
@@ -130,11 +130,27 @@
                             adds a little <span class="description">magic</span>
                         </p>
                     </div>
-                </div>
-                <section class="panel myWork full-height flex-center">
-                    <h1 class="section-headers">My work</h1>
-                    <div class="box-1 box">box-1</div>
                 </section>
+                <article class="panel myWork full-height">
+                    <div class="curvy-line-side flex-center">
+                        <h2 class="vertical work-title-text">Recent Work</h2>
+                    </div>
+                    <section class="portfolio"> 
+                        <div class="portfolio__categories flex-center">
+                            <a href="#0" style="color: #F3D4C9; opacity: 0.2" data-color="rgb(156, 164, 180)" data-imagelarge="./img/wr01.png" data-imagesmall="./img/wr02.png">Weather Report</a>
+                            <a href="#0" style="color: #F3D4C9; opacity: 0.2" data-color="#F3D4C9" data-imagelarge="./img/cs02.png" data-imagesmall="./img/cs01.png">Control Shift</a>
+                            <a href="#0" style="color: #F3D4C9; z-index: 1" data-color="#F3D4C9" data-imagelarge="./img/bc01.png" data-imagesmall="./img/bc02.png">Broken Circles</a>
+                            <a href="#0" style="color: #F3D4C9; opacity: 0.2" data-color="#F3D4C9" data-imagelarge="./img/lftc01.png" data-imagesmall="./img/lftc02.png">Looking for the Cloud</a>
+                            <a href="#0" style="color: #F3D4C9; opacity: 0.2" data-color="#F3D4C9" data-imagelarge="./img/kg03.png" data-imagesmall="./img/kg01.png">Exhibition Website</a>  
+                        </div>
+                        <div class="portfolio__image--l" style="visibility: visible">
+                            <div class="image_inside" style="background-image: url('./img/bc01.png')"></div>
+                        </div>   
+                        <div class="portfolio__image--s" style="visibility: visible">
+                            <div class="image_inside" style="background-image: url('./img/bc02.png')"></div>
+                        </div> 
+                    </section>
+                </article>
                 <section class="panel two full-height flex-center">
                     <h1 class="section-headers">Section 2</h1>
                 </section>
@@ -148,7 +164,7 @@
     </main> <!-- #main-container -->
 
     <!-- fill background between sections with margin - eg. portfolio  -->
-    <aside class="fill-background" style="background-color: #ACB7AE"></aside>
+    <aside class="fill-background" style="background-color: #F3D4C9"></aside>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/ScrollTrigger.min.js"></script>

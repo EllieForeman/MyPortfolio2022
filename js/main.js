@@ -63,3 +63,73 @@ logoBlobs.forEach((blob) => {
         duration: 5
     });
 });
+
+// PORTFOLIO PAGE
+const allLinks = gsap.utils.toArray('.portfolio__categories a');
+const pageBackground = document.querySelector('.fill-background');
+const largeImage = document.querySelector('.portfolio__image--l');
+const smallImage = document.querySelector('.portfolio__image--s');
+const lInside = document.querySelector('.portfolio__image--l .image_inside');
+const sInside = document.querySelector('.portfolio__image--s .image_inside');
+ 
+function initPortfolioHover() {
+    allLinks.forEach(link => {
+        link.addEventListener('mouseenter', createPortfolioHover);
+        link.addEventListener('mouseleave', createPortfolioHover);
+        link.addEventListener('mousemove', createPortfolioMove);
+    });
+}
+ 
+function createPortfolioHover(e){
+ 
+    if(e.type === 'mouseenter'){
+        const { color, imagelarge, imagesmall } = e.target.dataset;
+        const allSiblings = allLinks.filter(item => item !== e.target)
+        const tl = gsap.timeline();
+        tl
+            .set(lInside, { backgroundImage: `url(${imagelarge})`})
+            .set(sInside, { backgroundImage: `url(${imagesmall})`})
+            .to([largeImage, smallImage], {duration: 1, autoAlpha: 1})
+            .to(allSiblings, {color: '#F76354', autoAlpha: 0.2}, 0)
+            .to(e.target, {color: '#F76354', autoAlpha: 1}, 0)
+            // .to(pageBackground, {backgroundColor: color, ease: 0}, 0); // change background colour on hover
+    } else if(e.type === 'mouseleave'){
+        const tl = gsap.timeline();
+        tl
+            .to([largeImage, smallImage], {duration: 1, autoAlpha: 0})
+            .to([allLinks], {color: '#F76354', autoAlpha: 1}, 0)
+        // fade out images
+        // all links back to black
+        // change background color back to default #ACB7AE
+ 
+    }
+ 
+}
+
+function createPortfolioMove(e){
+    const { clientY } = e;
+    gsap.to(largeImage, {
+        duration: 1.2,
+        y: moveHeight(clientY)/7,
+        ease: 'Power3.inOut'
+    })
+    gsap.to(smallImage, {
+        duration: 1.5,
+        y: moveHeight(clientY)/3,
+        ease: 'Power3.inOut'
+    })
+}
+
+function moveHeight(clientY) {
+    return -(document.querySelector('.portfolio__categories').clientHeight - clientY);
+}
+
+function init(){
+     
+    initPortfolioHover();
+ 
+}
+ 
+window.addEventListener('load', function(){
+    init();
+});
