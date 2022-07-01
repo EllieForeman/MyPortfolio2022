@@ -12,6 +12,7 @@
     --font-narrow-headings: 'Darker Grotesque', sans-serif;
     --font-curvy-headings: 'Bodoni Moda', serif;
     --font-rubik-wide: 'Rubik Mono One', sans-serif;
+    --font-small: 'Karla', sans-serif;
     /* --bcg-green: #ACB7AE; */
     --bcg-red: #F76354;
     --bcg-lightcream:#FEFCF0;
@@ -102,6 +103,7 @@ section {
     flex-direction: column;
     align-items: center;
 }
+
 
 /* HEADER PAGE - 
 Blobs */
@@ -208,7 +210,7 @@ header p {
     bottom: 1.5vh;
     left: 31vw;
     font-size: 1.5vw;
-    font-family: 'Karla', sans-serif;
+    font-family: var(--font-small);
     color: var(--text-color);
     letter-spacing: 1.2px;
 }
@@ -224,7 +226,7 @@ header p {
     background-size: cover;
 }
 .i-like-outer-container p {
-    font-family: 'Karla', serif; 
+    font-family: var(--font-small);
     font-size: 8.5vw;
     font-weight: 300;
     text-align: center;
@@ -313,17 +315,34 @@ header p {
 }
 
 /* ABOUT ME */
+.about-me {
+    padding-top: 10%;
+}
+
 .about-me-header {
     font-family: var(--font-rubik-wide);
-    color: var(--bcg-red)
+    color: var(--bcg-red);
+    text-align: center;
+    font-size: 8vw;
+    margin: 0;
 }
 .panel.two {
     background-color: var(--bcg-lightcream);
 }
+.portfolio-image {
+    height: 30vh;
+    margin: 20px 20px 20px 5%;
+    /* border-radius: 97% 75% 59% 111% / 71% 49% 81% 98%; */
+}
+.about-me-text {
+    width: 80%;
+    font-family: var(--font-small);
+}
+
 
 /* My work section */
 .final {
-    background-color: #FEFCF0;
+    background-color: var(--text-color);
 }
 
 .box {
@@ -414,14 +433,32 @@ header p {
     .portfolio {
         width: 80%;
     }
-    /* .curvy-line-side {
-        width: 20%;
-    } */
     .portfolio__categories a {
         font-size: 3.5vw;
         line-height: 2.3;
     }
+    /* ABOUT ME */
+    .am-textbox {
+        align-items: flex-start;
+        margin: 0 20px 0 20px;
+    }
+    .about-me {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .about-me-header {
+        text-align: left;
+    }
+    .wave {
+        display: none;
+    }
+    .portfolio-image {
+        height: 50vh;
+        margin-left: 5%;
+    }
+
 }
+
 
 @media only screen and (min-width: 1140px) {
     .i-like-outer-container p {
