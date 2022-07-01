@@ -98,12 +98,7 @@ function createPortfolioHover(e){
         tl
             .to([largeImage, smallImage], {duration: 1, autoAlpha: 0})
             .to([allLinks], {color: '#F76354', autoAlpha: 1}, 0)
-        // fade out images
-        // all links back to black
-        // change background color back to default #ACB7AE
- 
-    }
- 
+    } 
 }
 
 function createPortfolioMove(e){
